@@ -6,7 +6,7 @@ import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
 
 function App() {
-  const [params, setParams] = useState({})
+  const [params, setParams] = useState({description: '', location: '', full_time: false});
   const [page, setPage] = useState(1)
   const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page)
 
